@@ -1,0 +1,7 @@
+.form
+	What are you up to?
+	
+	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+		= render :view => :error_messages
+		= f.text_field "text"
+		= submit_tag "Tweet!"

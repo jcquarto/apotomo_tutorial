@@ -1,0 +1,13 @@
+= widget_div do
+	%ul
+		- for tweet in @tweets
+			%li
+				= tweet.text
+
+	%p
+		What are you up to?
+	
+		=form_tag url_for_event(:submit), :remote => true do
+			= text_field_tag 'text'
+			= submit_tag "Tweet!"
+		

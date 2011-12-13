@@ -1,0 +1,7 @@
+This is the Apotomo tutorial, updated for Rails 3.1
+
+Many thanks to Nick Sutterer for developing Apotomo, and John Quarto-vonTivadar for updating the tutorial codebase to Rails 3.1 and tightening up the tutorial language.
+
+There are twelve sections in the tutorial. As you work through each section, we have a working Rails 3.1.x version of the ongoing app that you'd end up with if you code that section on your own. So you can jump in from anywhere, as well as check your work if you're coding along with the tutorial.
+
+Good Luck!

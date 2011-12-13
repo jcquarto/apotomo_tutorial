@@ -1,0 +1,526 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTweets (20111213063722)
+  [1m[35m (0.5ms)[0m  CREATE TABLE "tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111213063722')[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tweets")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-12-13 01:24:04 -0600
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2011-12-13 01:24:12 -0600
+
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2011-12-13 01:25:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:25:31 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (30.7ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (undefined method `render_widget' for #<#<Class:0x00000103629cc0>:0x00000103619f00>):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml__863340056194620551_2175844760'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:27:32 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml__863340056194620551_2175844760'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTweets (20111213063722)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tweets")
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:29:36 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml__3064111591821194946_2158065460'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:31:00 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:31:03 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:32:01 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:32:02 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2011-12-13 01:32:48 -0600
+
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2011-12-13 01:32:53 -0600
+
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:40:33 -0600
+  Processing by DashboardController#index as HTML
+Rendered dashboard/index.html.haml within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/cato/Sites/rails_apps/apotomo_tutorial/01_introduction/app/widgets/twitter_widget.rb:14: syntax error, unexpected $end, expecting keyword_end):
+    2: 
+    3: #dashboard
+    4: 	.column
+    5: 		= render_widget :twitter
+  app/controllers/dashboard_controller.rb:4:in `block in <class:DashboardController>'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:41:07 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/display.html.haml (1.6ms)
+Rendered dashboard/index.html.haml within layouts/application (508.3ms)
+Completed 500 Internal Server Error in 514ms
+
+ActionView::Template::Error (Inconsistent indentation: 2 tabs were used for indentation, but the rest of the document was indented using 2 spaces.):
+    1: = widget_div do
+    2:   %ul
+    3:     - for tweet in @tweets
+    4: 		%li
+    5: 			= tweet.text
+    6: 
+    7:   %p
+  app/widgets/twitter/display.html.haml:4
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:42:01 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (1.4ms)
+Rendered dashboard/index.html.haml within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (Inconsistent indentation: "    \t" was used for indentation, but the rest of the document was indented using 1 tab.):
+    1: = widget_div do
+    2: 	%ul
+    3:     	- for tweet in @tweets
+    4: 			%li
+    5: 				= tweet.text
+    6: 
+  app/widgets/twitter/display.html.haml:3
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___92388911899218420_2158185440'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:42:31 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/display.html.haml (8.6ms)
+Rendered dashboard/index.html.haml within layouts/application (82.2ms)
+Compiled application.css  (1ms)  (pid 4889)
+Compiled dashboard.css  (8ms)  (pid 4889)
+Completed 200 OK in 129ms (Views: 127.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-13 01:42:31 -0600
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 01:42:31 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 01:42:31 -0600
+Served asset /dashboard.css - 304 Not Modified (2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:46:26 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (1.7ms)
+Rendered dashboard/index.html.haml within layouts/application (23.0ms)
+Compiled application.css  (2ms)  (pid 4889)
+Compiled app.css  (0ms)  (pid 4889)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 01:46:27 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 01:46:27 -0600
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-13 01:46:27 -0600
+Served asset /defaults.js - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 01:46:27 -0600
+Served asset /app.css - 200 OK (3ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 01:46:38 -0600
+  Processing by DashboardController#render_event_response as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "text"=>"I am a tweet", "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mSQL (37.2ms)[0m  [1mINSERT INTO "tweets" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 Dec 2011 07:46:38 UTC +00:00], ["text", "I am a tweet"], ["updated_at", Tue, 13 Dec 2011 07:46:38 UTC +00:00]]
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (2.1ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 96ms (Views: 17.0ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:50:59 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/display.html.haml (71.3ms)
+Rendered dashboard/index.html.haml within layouts/application (99.0ms)
+Completed 200 OK in 112ms (Views: 111.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-13 01:51:00 -0600
+Served asset /defaults.js - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 01:51:00 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:51:24 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (8.3ms)
+Rendered dashboard/index.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-13 01:51:24 -0600
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 01:51:24 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 01:51:31 -0600
+  Processing by DashboardController#render_event_response as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "text"=>"I am tweeting", "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "tweets" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 Dec 2011 07:51:31 UTC +00:00], ["text", "I am tweeting"], ["updated_at", Tue, 13 Dec 2011 07:51:31 UTC +00:00]]
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (2.4ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 105ms (Views: 4.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 01:54:21 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/display.html.haml (9.1ms)
+Rendered dashboard/index.html.haml within layouts/application (31.9ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 01:54:21 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2011-12-13 01:54:21 -0600
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 01:54:29 -0600
+  Processing by DashboardController#render_event_response as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "text"=>"I tweet on.", "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tweets" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 Dec 2011 07:54:29 UTC +00:00], ["text", "I tweet on."], ["updated_at", Tue, 13 Dec 2011 07:54:29 UTC +00:00]]
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/display.html.haml (2.2ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 117ms (Views: 3.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 02:03:51 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (6.5ms)
+Rendered dashboard/index.html.haml within layouts/application (29.0ms)
+Compiled application.js  (4ms)  (pid 4889)
+Compiled jquery.js  (2ms)  (pid 4889)
+Compiled jquery_ujs.js  (65ms)  (pid 4889)
+Compiled dashboard.js  (464ms)  (pid 4889)
+Completed 200 OK in 644ms (Views: 643.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 02:03:52 -0600
+Served asset /jquery.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 02:03:52 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 02:03:52 -0600
+Served asset /dashboard.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 02:03:52 -0600
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 02:03:52 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 02:03:52 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 02:03:53 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 02:04:00 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "text"=>"another tweet", "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tweets" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 Dec 2011 08:04:00 UTC +00:00], ["text", "another tweet"], ["updated_at", Tue, 13 Dec 2011 08:04:00 UTC +00:00]]
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (2.5ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 3.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/display.html.haml (5.7ms)
+Rendered dashboard/index.html.haml within layouts/application (27.9ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 02:04:11 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTweets (20111213063722)
+  [1m[35m (2.4ms)[0m  CREATE TABLE "tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111213063722')[0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tweets")
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/display.html.haml (1.9ms)
+Rendered dashboard/index.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 02:05:45 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
