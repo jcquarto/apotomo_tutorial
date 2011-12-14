@@ -1,0 +1,8 @@
+- if tweet.errors.any?
+	%strong
+		= "#{pluralize(tweet.errors.count, "error")} prohibited this tweet from being saved:"				
+
+	%ul
+		- tweet.errors.full_messages.each do |msg|
+			%li
+				=msg

@@ -17,6 +17,7 @@ class TwitterWidget < Apotomo::Widget
   end
   
   def form
+    @tweet = Tweet.new
     render
   end
   

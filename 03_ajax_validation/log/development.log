@@ -1845,3 +1845,881 @@ ActionView::Template::Error (undefined local variable or method `tweet' for #<#<
 Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
 Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
 Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 12:24:21 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (8.7ms)
+Rendered app/widgets/twitter/form.haml (12.2ms)
+Rendered app/widgets/twitter/display.html.haml (18.5ms)
+Rendered dashboard/index.html.haml within layouts/application (96.8ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (undefined local variable or method `tweet' for #<#<Class:0x00000102c95c68>:0x00000102d400f0>):
+    1: - if tweet.errors.any?
+    2: 	%strong
+    3: 		= "#{pluralize(tweet.errors.count, "error")} prohibited this tweet from being saved:"				
+    4: 
+  app/widgets/twitter/error_messages.html.haml:1:in `_app_widgets_twitter_error_messages_html_haml__2687679236284504396_2170277680'
+  app/widgets/twitter/form.haml:5:in `block in _app_widgets_twitter_form_haml___3948537691569035309_2180433880'
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2180433880'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 12:25:13 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (3.5ms)
+Rendered app/widgets/twitter/form.haml (9.1ms)
+Rendered app/widgets/twitter/display.html.haml (14.9ms)
+Rendered dashboard/index.html.haml within layouts/application (41.2ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (undefined method `errors' for :tweet:Symbol):
+    1: - if tweet.errors.any?
+    2: 	%strong
+    3: 		= "#{pluralize(tweet.errors.count, "error")} prohibited this tweet from being saved:"				
+    4: 
+  app/widgets/twitter/error_messages.html.haml:1:in `_app_widgets_twitter_error_messages_html_haml__2687679236284504396_2169981540'
+  app/widgets/twitter/form.haml:5:in `block in _app_widgets_twitter_form_haml___3948537691569035309_2170398900'
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2170398900'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 12:26:22 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (24.6ms)
+Rendered app/widgets/twitter/display.html.haml (34.0ms)
+Rendered dashboard/index.html.haml within layouts/application (62.8ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (undefined local variable or method `tweet' for #<#<Class:0x00000103ecfde8>:0x00000103cc0980>):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		= f.text_field "text"
+    7: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5:in `block in _app_widgets_twitter_form_haml___3948537691569035309_2179332800'
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2179332800'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:12:55 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (31.3ms)
+Rendered app/widgets/twitter/form.haml (37.1ms)
+Rendered app/widgets/twitter/display.html.haml (43.0ms)
+Rendered dashboard/index.html.haml within layouts/application (78.9ms)
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (undefined method `errors' for #<ActionView::Helpers::FormBuilder:0x0000010507e710>):
+    1: - if tweet.errors.any?
+    2: 	%strong
+    3: 		= "#{pluralize(tweet.errors.count, "error")} prohibited this tweet from being saved:"				
+    4: 
+  app/widgets/twitter/error_messages.html.haml:1:in `_app_widgets_twitter_error_messages_html_haml__2687679236284504396_2169981540'
+  app/widgets/twitter/form.haml:5:in `block in _app_widgets_twitter_form_haml___3948537691569035309_2189766880'
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2189766880'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.2ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.9ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:14:01 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (13.2ms)
+Rendered app/widgets/twitter/display.html.haml (19.6ms)
+Rendered dashboard/index.html.haml within layouts/application (41.8ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: .form
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for @tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		= render :view => :error_messages, :locals => {:tweet => @tweet}
+    6: 		= f.text_field "text"
+    7: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2178727220'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:17:52 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (1.0ms)
+Rendered app/widgets/twitter/form.haml (7.2ms)
+Rendered app/widgets/twitter/display.html.haml (54.2ms)
+Rendered dashboard/index.html.haml within layouts/application (101.7ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (undefined method `errors' for :tweet:Symbol):
+    1: - if tweet.errors.any?
+    2: 	%strong
+    3: 		= "#{pluralize(tweet.errors.count, "error")} prohibited this tweet from being saved:"				
+    4: 
+  app/widgets/twitter/error_messages.html.haml:1:in `_app_widgets_twitter_error_messages_html_haml__2687679236284504396_2169981540'
+  app/widgets/twitter/form.haml:5:in `block in _app_widgets_twitter_form_haml___3948537691569035309_2170955880'
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2170955880'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:22:30 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (11.3ms)
+Rendered app/widgets/twitter/display.html.haml (19.3ms)
+Rendered dashboard/index.html.haml within layouts/application (54.5ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (undefined local variable or method `tweet' for #<#<Class:0x00000102d0f860>:0x00000102c40fb0>):
+    1: .form
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		= f.text_field "text"
+    7: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:4:in `_app_widgets_twitter_form_haml___3948537691569035309_2170659500'
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:25:08 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.1ms)
+Rendered app/widgets/twitter/form.haml (1.8ms)
+Rendered app/widgets/twitter/display.html.haml (9.5ms)
+Rendered dashboard/index.html.haml within layouts/application (46.9ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		#= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		
+    7: 		-if :tweet.errors.any?
+    8: 			Hi
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:26:21 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (2.3ms)
+Rendered app/widgets/twitter/display.html.haml (8.7ms)
+Rendered dashboard/index.html.haml within layouts/application (30.7ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		#= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		
+    7: 		= f.text_field "text"
+    8: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:26:22 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (1.4ms)
+Rendered app/widgets/twitter/display.html.haml (7.5ms)
+Rendered dashboard/index.html.haml within layouts/application (30.3ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		#= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		
+    7: 		= f.text_field "text"
+    8: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:26:24 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (1.5ms)
+Rendered app/widgets/twitter/display.html.haml (7.4ms)
+Rendered dashboard/index.html.haml within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		#= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		
+    7: 		= f.text_field "text"
+    8: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.9ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:26:28 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (3.8ms)
+Rendered app/widgets/twitter/display.html.haml (14.0ms)
+Rendered dashboard/index.html.haml within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		#= render :view => :error_messages, :locals => {:tweet => tweet}
+    6: 		
+    7: 		= f.text_field "text"
+    8: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:26:48 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (1.9ms)
+Rendered app/widgets/twitter/display.html.haml (7.7ms)
+Rendered dashboard/index.html.haml within layouts/application (29.8ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for :tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		# = render :view => :error_messages, :locals => {:tweet => :tweet}
+    6: 		
+    7: 		= f.text_field "text"
+    8: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:20:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__4580586328072276517_2170486280'
+  app/widgets/twitter_widget.rb:6:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml___3335542900972823357_2168575520'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:29:34 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (14.0ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (22.4ms)
+Rendered dashboard/index.html.haml within layouts/application (44.9ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:29:35 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:29:39 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"twixt"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (2.0ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (8.6ms)
+Rendered text template (0.0ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 78ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:29:49 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>""}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (2.0ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (8.7ms)
+Rendered text template (0.0ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 43ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTweets (20111213063722)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tweets")
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:32:09 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"tweet"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (2.8ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (4.4ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (26.1ms)
+Rendered text template (0.0ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 208ms (Views: 2.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:37:31 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/form.haml (1.6ms)
+Rendered app/widgets/twitter/display.html.haml (7.4ms)
+Rendered dashboard/index.html.haml within layouts/application (32.8ms)
+Completed 500 Internal Server Error in 39ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    2: 	What are you up to?
+    3: 	
+    4: 	=form_for @tweet, :url => url_for_event(:submit), :remote => true do |f|
+    5: 		# = render :view => :error_messages, :locals => {:tweet => @tweet}
+    6: 		
+    7: 		= f.text_field "text"
+    8: 		= submit_tag "Tweet!"
+  app/widgets/twitter/form.haml:5
+  app/widgets/twitter_widget.rb:21:in `form'
+  app/widgets/twitter/display.html.haml:4:in `block in _app_widgets_twitter_display_html_haml__2341582872934815345_2164035540'
+  app/widgets/twitter/display.html.haml:1:in `_app_widgets_twitter_display_html_haml__2341582872934815345_2164035540'
+  app/widgets/twitter_widget.rb:7:in `display'
+  app/views/dashboard/index.html.haml:5:in `_app_views_dashboard_index_html_haml__3514056950646443628_2179124920'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (2.7ms)
+Rendered app/widgets/twitter/form.haml (19.0ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (37.0ms)
+Rendered dashboard/index.html.haml within layouts/application (124.9ms)
+Completed 200 OK in 177ms (Views: 170.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+Served asset /dashboard.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:37:59 -0600
+Served asset /app.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:38:00 -0600
+Served asset /dashboard.css - 304 Not Modified (5ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:38:06 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"123"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (4.3ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (10.5ms)
+Rendered text template (0.0ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:38:33 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (9.7ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (16.5ms)
+Rendered dashboard/index.html.haml within layouts/application (96.9ms)
+Completed 200 OK in 106ms (Views: 104.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /dashboard.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:38:34 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:41:20 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (10.2ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (19.0ms)
+Rendered dashboard/index.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:41:21 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:41:26 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"456"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (5.8ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (12.1ms)
+Rendered text template (0.0ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:41:47 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (18.9ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (26.4ms)
+Rendered dashboard/index.html.haml within layouts/application (49.0ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:41:48 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+  Processing by DashboardController#index as HTML
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (15.2ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (21.8ms)
+Rendered dashboard/index.html.haml within layouts/application (54.9ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:48:46 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:48:58 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (75.7ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (82.5ms)
+Rendered dashboard/index.html.haml within layouts/application (105.3ms)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:48:59 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:49:04 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"jkl"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.1ms)
+Rendered app/widgets/twitter/form.haml (4.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (10.6ms)
+Rendered text template (0.0ms)
+Rendered text template (0.0ms)
+Completed 200 OK in 42ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:53:04 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"123"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `stringify_keys' for "123":String):
+  app/widgets/twitter_widget.rb:11:in `process_tweet'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:53:06 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"123"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `stringify_keys' for "123":String):
+  app/widgets/twitter_widget.rb:11:in `process_tweet'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2011-12-13 14:53:08 -0600
+  Processing by DashboardController#index as HTML
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" 
+Rendered app/widgets/twitter/list.haml (0.1ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/error_messages.html.haml (0.2ms)
+Rendered app/widgets/twitter/form.haml (16.7ms)
+Rendered text template (0.0ms)
+Rendered app/widgets/twitter/display.html.haml (23.2ms)
+Rendered dashboard/index.html.haml within layouts/application (45.4ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/app.css?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /app.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2011-12-13 14:53:09 -0600
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started POST "/dashboard/render_event_response?source=twitter&type=submit" for 127.0.0.1 at 2011-12-13 14:53:13 -0600
+  Processing by DashboardController#render_event_response as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC21OMybSmm33XMC54HldxsWaaBHvEbC05R/QqZI5Nw=", "tweet"=>{"text"=>"456"}, "commit"=>"Tweet!", "source"=>"twitter", "type"=>"submit"}
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `stringify_keys' for "456":String):
+  app/widgets/twitter_widget.rb:11:in `process_tweet'
+
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/cato/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.8ms)

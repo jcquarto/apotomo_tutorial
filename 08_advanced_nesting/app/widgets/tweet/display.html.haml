@@ -1,0 +1,12 @@
+%li{:id => widget_id, 'data-id' => @tweet.id, 'data-event-url' => url_for_event(:heart)}
+	= @tweet.text
+	
+	-if @tweet.loved?
+		=image_tag "heart.png"
+	-else
+		=image_tag "heart-faded.png"
+	
+:javascript
+	$("##{widget_id} img").click(function() {
+		$.ajax({url: $("##{widget_id}").attr("data-event-url")+"&id=" + $("##{widget_id}").attr("data-id")})
+	});
